@@ -180,7 +180,7 @@ func (m *Marshaler) marshalObject(out *errWriter, v proto.Message, indent, typeU
 
 		// IsNil will panic on most value kinds.
 		switch value.Kind() {
-		case reflect.Chan, reflect.Func, reflect.Interface, reflect.Map, reflect.Ptr, reflect.Slice:
+		case reflect.Chan, reflect.Func, reflect.Interface, reflect.Map, reflect.Ptr:
 			if value.IsNil() {
 				continue
 			}
